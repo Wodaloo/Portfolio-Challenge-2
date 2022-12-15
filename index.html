@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mason Avianos Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <p2>Welcome To My Portfolio</p2>
+                <ul>
+
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#mywork">My Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a
+                            href="https://docs.google.com/document/d/1dQk-u9RN4fK0r9FH69EuATNZx4hlE9zI2PVtgiSK00Y/edit#heading=h.x8fm1uorkbaw">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, My name <br> is <span>Mason Aviano</span></h1>
+            </div>
+        </div>
+    </div>
+    <!---about--->
+    <AboutSection id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/User.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>After highschool I chose to pursue a career as a Real-Estate Agent, Unfortunatley it is a career
+                        that comes and goes often. But, fortunatley it showed me that the pursuit of knowledge is my
+                        purpose in life. The more knowledge a single person holds the more power they have within,
+                        atleast that's what I like too tell myself. Anyways, what better knowledge could you aquire in
+                        this technological society that is advancing every day, than learning how to code? I guess, how
+                        to covertly remove yourself from political conversations? hmm, no not for me... I love to
+                        entertain anyone from the far-right, or far-left. So I ended up choosing to learn how to code.
+                        That's why I decided to enroll in a Fullstack Webdevlopment Bootcamp. To say the least, it was
+                        one of the best decisions I've ever made.</p>
+
+                    <Tabs class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </Tabs>
+                    <Skills class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Fullstack Web Development</span><br>Fullstack Web Development Bootcamp</li>
+                            <li><span>Web Development</span><br>N/A</li>
+                            <li><span>App Development</span><br>N/A</li>
+                        </ul>
+                    </Skills>
+                    <Experience class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br>Fullstack Web Development Bootcamp</li>
+                            <li><span>Web Development</span><br>N/A</li>
+                            <li><span>App Development</span><br>N/A</li>
+                        </ul>
+                    </Experience>
+                    <Education class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>Fullstack Web Development Bootcamp</li>
+                            <li><span>Web Development</span><br>N/A</li>
+                            <li><span>App Development</span><br>N/A</li>
+                        </ul>
+                    </Education>
+                </div>
+            </div>
+        </div>
+    </AboutSection>
+    <!--portfolio-->
+    <div id="mywork">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <h3>Social Media App</h3>
+
+                    <img src="images/social media app.png" alt="">
+                    <div class="layer">
+                    </div>
+                </div>
+                <div class="work">
+                    <h3>Music App</h3>
+
+                    <img src="images/music app.png" alt="">
+                    <div class="layer">
+                    </div>
+                </div>
+                <div class="work">
+                    <h3>Shopping App</h3>
+
+                    <img src="images/online shopping app.png" alt="">
+                    <div class="layer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact-->
+    <section class="contact-form" id="contact">
+        <h2>Contact me:</h2>
+        <div>
+            <address>
+                <a href="tel:+18018578413">801-857-8413</a>
+                <a href="mailto:masonaviano@icloud.com">masonaviano@icloud.com</a>
+            </address>
+        </div>
+    </section>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link")
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
